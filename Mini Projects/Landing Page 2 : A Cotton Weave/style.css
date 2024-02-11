@@ -111,125 +111,12 @@ body {
 #img{
     height: calc(100% - 12rem);
     object-fit: cover;
+    background-color: #000;
     top: 0;
 }
 
 #bottom-left p:nth-child(2){
     width: 80%;
     font-size: 1rem;
-}
-
-
-@media (max-width : 499px) {
-    html,
-    body {
-        font-size: 10px;
-    }
-
-    #main{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #main #left, #main #right{
-        width: 100%;
-    }
-
-    #content{
-        margin-top: 5rem;
-        width: 100%;
-    }
-
-    #left #content h2{
-        font-size: 2rem;
-    }
-
-    #left #content p{
-        font-size: 1.2rem;
-    }
-
-    #bottom-left{
-        margin-top: 0;
-    }
-
-    #color{
-        margin: auto;
-    }
-
-    #right #img{
-        width: 100%;
-    }
-
-    #content #line{
-        display: block;
-        margin-top: 2rem;
-    }
-
-    #main #right{
-        margin-left: 1.5rem;
-        margin-top: 2rem;
-        position: relative;
-    }
-
-    #main #right #top{
-        margin-top: 0;
-    }
-
-    #right #side{
-        transform: rotate(0deg);
-        position: absolute;
-        bottom: 0;
-        left: 50px;
-
-    }
-
-    #right #side p{
-        font-size: 2.3rem;
-        font-weight: 600;
-    }
-
-    #right #add-to-bag{
-        position: absolute;
-        top: 0;
-        left: 15%;
-    }
-}
-
-
-@media (min-width : 500px) and (max-width : 800px) {
-    html,
-    body {
-        font-size: 12px;
-    }
-
-    #main{
-        /* flex-direction: column; */
-    }
-
-    #right{
-        /* background-color: antiquewhite; */
-        position: absolute;
-        bottom: 0;
-    }
-
-    #right #img{
-        width: 100%;
-    }
-}
-
-
-@media (min-width : 801px) and (max-width : 1200px) {
-    html,
-    body {
-        font-size: 16px;
-    }
-}
-
-@media (min-width : 1201px) {
-    html,
-    body {
-        font-size: 24px;
-    }
-    
 }
 
