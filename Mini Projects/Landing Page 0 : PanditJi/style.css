@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .text-center{
@@ -176,14 +177,14 @@
     background-color: rgb(211, 12, 12);
 }
 
-.white{
-    color: white;
-    background-color: rgb(227, 156, 24);
-}
-
-.white:hover {
+.white {
     background-color: white;
     color: rgb(227, 156, 24);
+}
+
+.white:hover{
+    color: white;
+    background-color: rgb(227, 156, 24);
 }
 
 #about-puja{
@@ -197,22 +198,12 @@
 
 #other-offerings{
     display: block;
+    height: 78%;
 }
-
-#other-offerings h3{
-    padding-top: 20px;
-}
-
-#other-offerings h1{
-    padding-top: 10px;
-}
-
 
 #cards{
     display: flex;
     gap: 2em;
-    padding-top: 15px;
-    height: 65%;
     margin-top: 4em;
 }
 
@@ -242,23 +233,7 @@
 
 
 #footer{
-    background-color: #161616;
+    background-color: rgb(22,22,22);
     height: 42%;
-    position: relative;
-
 }
 
-#copyright-label{
-    border-top: 2px solid rgb(57,57,57);
-    color: #ababab;
-    position: absolute;
-    bottom: 0;
-    height: 12%;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 100;
-    color: rgb(145,145,145);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
