@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.btn-center{
+    margin-left: 30%;
+} 
+
+.btn-center-top{
+    margin-left: 43%;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#navbar{
+    width: 66%;
+    height: 10%;
+    display: flex;
+    margin: auto;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #121212;
+}
+
+#temple{
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+.points{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: fit-content;
+}
+
+.points i{
+    background-color: rgb(227, 156, 24);
+    color: #fff;
+    font-size: 20px;
+    padding: 2px;
+}
+
+#img{
+    height: 100%;
+    width: 100%;
+}
+
+#over-layer{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+#over-layer h6{
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-top: 6%;
+    font-size: 20px;
+}
+
+#over-layer h1{
+    font-size: 80px;
+    letter-spacing: 5px;
+    line-height: 75px;
+    padding: 20px;
+    font-weight: 100;
+}
+
+#over-layer p{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#over-layer h1 b{
+    font-weight: 400;
+}
+
+
+.container{
+    padding: 5% 17%;
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+    margin: auto;
+}
+
+.container:nth-child(n){
+    background-color: #fff;
+}
+
+.container:nth-child(2n){
+    background-color: rgb(247, 244, 238);
+}
+
+#about-pandit #right {
+    width: 50%;
+}
+
+.about{
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-left: .25rem;
+    font-weight: 400;
+    letter-spacing: .25rem;
+    color: #ababab;
+}
+
+.heading{
+    font-size: 3.3em;
+    font-weight: 400;
+    line-height: 1.1em;
+    margin: .5em 0;
+    height: fit-content;
+}
+
+#about-pandit #right h1{
+    padding-left: 0.5em;
+    border-left: 0.12em solid rgb(227, 156, 24);
+}
+
+.heading b{
+    font-weight: 600;
+}
+
+.para{
+    font-size: 1.66em;
+    font-weight: 200;
+    color: #121212;
+}
+
+.btn{
+    font-size: 1.25em;
+    font-weight: 500;
+    padding: 1em;
+    border: none;
+    margin-top: 3em;
+}
+
+.btn i{
+    margin: 0 0.5em;
+    font-size: 1.25em;
+}
+
+.btn:hover #arrow-right{
+    margin-left: 1em;
+}
+
+.yellow{
+    color: white;
+    background-color: rgb(227, 156, 24);
+}
+
+.yellow:hover {
+    background-color: rgb(211, 12, 12);
+}
+
+.white{
+    color: white;
+    background-color: rgb(227, 156, 24);
+}
+
+.white:hover {
+    background-color: white;
+    color: rgb(227, 156, 24);
+}
+
+#about-puja{
+    background-color: rgb(244, 243, 234);
+    gap: 4em;
+}
+
+#about-puja #left h3{
+    margin-top: 4em;
+}
+
+#other-offerings{
+    display: block;
+}
+
+#other-offerings h3{
+    padding-top: 20px;
+}
+
+#other-offerings h1{
+    padding-top: 10px;
+}
+
+
+#cards{
+    display: flex;
+    gap: 2em;
+    padding-top: 15px;
+    height: 65%;
+    margin-top: 4em;
+}
+
+.card{
+    border-radius: 1em;
+    padding-bottom: 2em;
+    box-shadow:  0px 2px 2px rgb(0 0 0 / 60%);
+    background-color: #fff;
+}
+
+.card img{
+    border-radius: 0.9em 0.9em 0 0;
+}
+
+.name h3{
+    font-size: 2em;
+}
+
+.name h4{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.name button{
+    margin-top: 1em;
+}
+
+
+#footer{
+    background-color: #161616;
+    height: 42%;
+    position: relative;
+
+}
+
+#copyright-label{
+    border-top: 2px solid rgb(57,57,57);
+    color: #ababab;
+    position: absolute;
+    bottom: 0;
+    height: 12%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(145,145,145);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
