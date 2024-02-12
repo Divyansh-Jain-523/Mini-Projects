@@ -1,0 +1,178 @@
+@font-face {
+    font-family: Monument-Regular;
+    src: url(./resources/font/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+    font-family: Monument-Ultrabold;
+    src: url(./resources/font/MonumentExtended-Ultrabold.otf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#main{
+    height: 100%;
+    padding-top: 0.1px;
+    width: 100%;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+#nav{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 12%;
+} 
+
+#nav h1{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Monument-Ultrabold;
+    font-size: 45px;
+    font-weight: bolder;
+    letter-spacing: -3px;
+}
+
+
+#nav h3{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#nav h3:nth-last-child(2){
+    width: 29%;
+}
+
+#nav h3:nth-last-child(1){
+    width: 10%;
+}
+
+#content{
+    width: 100%;
+    height: 80%;
+    padding: 5vw;
+}
+
+#center{
+    background-color: aqua;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+#center video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    height: 52%;
+    width: 100%;
+    position: absolute; 
+    padding: 3vw;
+    bottom: 0;
+}
+
+.over-ele{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#over1{
+    margin-bottom: 2vw;
+}
+ 
+#over1 h1{
+    font-family: Monument-Ultrabold;
+    font-size: 3.6vw; 
+}
+
+#over1 h2{
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0vw 3vw;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+#over2{
+    border-top: 2px solid #fff;
+    padding: 1.5vw 0;
+}
+
+#over2{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+#over2 img{
+    height: 3vw;
+}
+
+#scroll{
+    height: 40vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2vw 1vw;
+    background-color: #fff;
+}
+
+#container{
+    flex-shrink: 0;
+    display: inline-block;
+    height: 100%; 
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#container img{
+    width: 33vh;
+    height: 33vh;
+    padding: 1vw;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: top;
+    
+}
+
+@keyframes anime {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100% );
+    }
+}
