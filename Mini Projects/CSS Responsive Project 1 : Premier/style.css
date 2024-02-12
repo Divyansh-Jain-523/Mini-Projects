@@ -17,8 +17,9 @@
 }
 
 html,body{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    background-color: rgb(247, 247, 247);
+    width: 100%;
 }
 
 
@@ -26,8 +27,6 @@ html,body{
     height: 100%;
     padding-top: 0.1px;
     width: 100%;
-    background-color: #f8f8f8;
-    position: relative;
 }
 
 #nav{
@@ -79,7 +78,6 @@ html,body{
 }
 
 #center{
-    background-color: aqua;
     width: 100%;
     position: relative;
     height: 100%;
@@ -158,6 +156,10 @@ html,body{
     animation-timing-function: linear;
 }
 
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+
 #container img{
     width: 33vh;
     height: 33vh;
@@ -168,9 +170,187 @@ html,body{
     
 }
 
+#alphabets{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#alphabets h5{
+    font-size: 1.7vw;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-right: 1vw;
+    border-bottom: 2px solid #000;
+
+}
+
+#alphabets h6{
+    font-size: 1vw;
+    padding: .5em .75em ;
+    border-radius: 50%;
+    border: 2px solid #00000000;
+    cursor: pointer;
+}
+
+#alphabets h6:hover{
+    border: 2px solid #000;
+}
+
+#page2{
+    width: 100%;
+    padding: 5vw 3.6vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#part1{
+    height: 100%;
+    width: 55%;
+}
+
+#part1 img{
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+}
+
+#part1 h1{
+    font-family: Monument-Ultrabold;
+    font-size: 3vw;
+    text-transform: uppercase;
+    padding: 1vw 0;
+}
+
+#part2{
+    width: 37%;
+    height: 100%;
+}
+
+#part2 img{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    display: unset;
+
+}
+
+#part2 #content{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 0;
+
+}
+
+#content h4{
+    width: 38%;
+    font-size: 1.7vw;
+    height: max-content;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content p{
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: fit-content;
+    font-weight: 500;
+    font-size: 1.13vw;
+    line-height: 1.2vw;
+}
+
+
+#page3{
+    height: 100%;
+    padding: 17.5vh 4vw 5vh 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page3 #left{
+    width: 38%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#page3 #left img{
+    width: 80%;
+    padding: 4vw;
+    align-self: center;
+    margin: auto;
+}
+
+#page3 #left h4{
+    padding: 0 3vw;
+    font-size: 1.6vw;
+    font-weight: 500;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#page3 #right{
+    width: 59%;
+    height: 100%;
+    background-color: cyan;
+}
+
+#page3 #right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 45%;
+}
+
+
+#page4{
+    height: 85%;
+    width: 100%;
+    padding: 3vw 5vw;
+}
+
+#page4 img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    object-position: 0 9%;
+}
+
+#page5{
+    padding: 5vh 5vw;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+}
+
+#page5 > h1{
+    font-family: Monument-Ultrabold;
+    font-size: 3vw;
+    text-align: center;
+    padding: 2vh 2vw 10vh 2vw;;
+}
+
+.page5-ele{
+    height: 16vh;
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.page5-ele:nth-last-child(1){
+    border-bottom: 2px solid #000;
+
+}
+
 @keyframes anime {
     from{
-        transform: translateX(0);
+        transform: translateX (0);
     }
     to{
         transform: translateX(-100% );

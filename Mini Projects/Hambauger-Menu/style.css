@@ -5,9 +5,13 @@
 }
 
 .main_box{
-    background : url("photo.jpg");
+    background : url("./resources/photo.jpg");
     height: 100vh;
     background-size: cover;
+}
+
+.btn_one{
+    position: relative;
 }
 
 .btn_one i{
@@ -18,6 +22,14 @@
     left: 16px;
     cursor: pointer;
     line-height: 60px;
+}
+
+#arrow{
+    transform: rotate(45deg);
+    width: 200px;
+    position: absolute;
+    left: 60px;
+    top: 10px;
 }
 
 .sidebar_menu{
@@ -128,3 +140,6 @@
     opacity: 1;
 }
 
+#check:checked #arrow{
+    display: none;
+}
