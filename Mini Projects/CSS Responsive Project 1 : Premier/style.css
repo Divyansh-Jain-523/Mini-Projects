@@ -203,11 +203,14 @@ html,body{
     border: 2px solid #000;
 }
 
-#page2{
+.page{
     width: 100%;
-    padding: 5vw 3.6vw;
     height: 100%;
+}
+
+#page2{
     display: flex;
+    padding: 5vw 3.6vw;
     align-items: center;
     justify-content: space-around;
 }
@@ -269,7 +272,6 @@ html,body{
 
 
 #page3{
-    height: 100%;
     padding: 17.5vh 4vw 5vh 5vw;
     display: flex;
     justify-content: space-between;
@@ -312,7 +314,6 @@ html,body{
 
 #page4{
     height: 85%;
-    width: 100%;
     padding: 3vw 5vw;
 }
 
@@ -325,9 +326,6 @@ html,body{
 
 #page5{
     padding: 5vh 5vw;
-    width: 100%;
-    height: 100%;
-    background-color: cyan;
 }
 
 #page5 > h1{
@@ -338,9 +336,12 @@ html,body{
 }
 
 .page5-ele{
-    height: 16vh;
+    height: 15vh;
     width: 100%;
     border-top: 2px solid #000;
+    padding: 1vh 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .page5-ele:nth-last-child(1){
@@ -348,11 +349,108 @@ html,body{
 
 }
 
+.page5-ele h5{
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    width: 5vw;
+    margin-top: 1vh;
+    margin-left: 3vw;
+    font-weight: 500;
+}
+
+.page5-ele #img{
+    width: 40%;
+    padding: 0 3vw;
+}
+
+.page5-ele img{
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0;
+    height: 100%;
+    object-position: top;
+}
+
+#img:hover img{
+
+    animation-name: img-hover;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+}
+
+.page5-ele h1{
+    width: 45%;
+    font-weight: 400;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.page5-ele > h1::after{
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    font-weight: 400;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.page5-ele h3{
+    width: 20%;
+    font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.page5-ele h3::after{
+
+    content: "2020 redesign";
+    font-size: 1vw;
+    text-transform: uppercase;
+}
+
+.page5-ele:nth-child(1) h1::after{
+    content: "25 March 2020";
+}
+
+.page5-ele:nth-child(2) h1::after{
+    content: "3rd February 2020";
+}
+
+.page5-ele:nth-child(3) h1::after{
+    content: "4th January 2020";
+}
+
+.page5-ele:nth-child(4) h1::after{
+    content: "8Th January 2020";
+}
+
+
+
+
+
+
+
 @keyframes anime {
     from{
         transform: translateX (0);
     }
     to{
         transform: translateX(-100% );
+    }
+}
+
+@keyframes img-hover {
+    0%{
+        opacity: 0;
+        margin-left: 0;
+    }
+
+    100%{
+        opacity: 1;
+        margin-left: 35%;
     }
 }
