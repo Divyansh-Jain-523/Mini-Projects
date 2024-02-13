@@ -363,7 +363,7 @@ html,body{
     padding: 0 3vw;
 }
 
-.page5-ele img{
+.page5-ele #img img{
     object-fit: cover;
     border-radius: 50%;
     opacity: 0;
@@ -371,7 +371,7 @@ html,body{
     object-position: top;
 }
 
-#img:hover img{
+.page5-ele #img:hover img{
 
     animation-name: img-hover;
     animation-duration: 2s;
@@ -428,11 +428,59 @@ html,body{
     content: "8Th January 2020";
 }
 
+#page6{
+    display: flex;
+    padding: 3vh 6vw 10vh 5vw;
+    height: 92%;
+    justify-content: space-between;
+}
 
+#page6 #left{
+    width: 48%;
+    height: 100%;
+    background-image: url(https://cdn0.weddingwire.in/article/7324/original/1920/jpg/104237-engagement-dresses-for-men-3.webp);
+    background-position-x: center;
+    background-position-y: top;
+}
 
+#page6 #right{
+    width: 48%;
+    height: 100%;
+}
 
+#page6 #right h1{
+    font-family: Monument-Ultrabold;
+    font-size: 3.3vw;
+}
 
+#page6 #right h3{
+    width: 62%;
+    padding-top: 2.5vw;
+    font-weight: 500;
+    font-size: 2vw;
+    font-family: serif;
+}
 
+#page6 #right h5{
+    padding-top: 2.5vw;
+    font-weight: 500;
+    font-size: 1.2vw;
+    width: 90%;
+    font-family: serif;
+}
+
+#page6 #right #img{
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vh;
+
+}
+
+#page6 #right #img img{
+    height: 43vh;
+    width: 42%;
+    object-fit: cover;
+}
 
 @keyframes anime {
     from{
