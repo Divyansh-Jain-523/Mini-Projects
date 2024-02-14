@@ -8,7 +8,6 @@
     src: url(./resources/font/MonumentExtended-Ultrabold.otf);
 }
 
-
 *{
     margin: 0;
     padding: 0 ;
@@ -22,7 +21,6 @@ html,body{
     width: 100%;
 }
 
-
 #main{
     height: 100%;
     padding-top: 0.1px;
@@ -30,7 +28,7 @@ html,body{
 }
 
 #nav{
-    margin-top: 40px;
+    margin-top: 2vw;
     display: flex;
     justify-content: space-between ;
     align-items: center;
@@ -46,11 +44,10 @@ html,body{
     justify-content: center;
     align-items: center;
     font-family: Monument-Ultrabold;
-    font-size: 45px;
+    font-size: 2.25vw;
     font-weight: bolder;
     letter-spacing: -3px;
 }
-
 
 #nav h3{
     width: 22%;
@@ -59,16 +56,20 @@ html,body{
     justify-content: center;
     align-items: center;
     border-right: 2px solid black;
-    font-size: 28px;
+    font-size: 1.4vw;
     font-weight: 600;
 }
 
-#nav h3:nth-last-child(2){
+#nav h3:nth-last-child(3){
     width: 29%;
 }
 
-#nav h3:nth-last-child(1){
+#nav h3:nth-last-child(2){
     width: 10%;
+}
+
+#nav h3:nth-last-child(1){
+    display: none;
 }
 
 #content{
@@ -146,7 +147,7 @@ html,body{
     background-color: #fff;
 }
 
-#container{
+.container{
     flex-shrink: 0;
     display: inline-block;
     height: 100%; 
@@ -160,7 +161,7 @@ html,body{
     display: none;
 }
 
-#container img{
+.container img{
     width: 33vh;
     height: 33vh;
     padding: 1vw;
@@ -173,14 +174,20 @@ html,body{
     height: 10vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    overflow-x: auto;
     align-items: center;
     gap: 1vw;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
 
+#alphabets::-webkit-scrollbar{
+    display: none;
+}
+
 #alphabets h5{
+    margin-left: 5vw;
     font-size: 1.7vw;
     font-weight: 400;
     font-style: italic;
@@ -221,6 +228,7 @@ html,body{
 
 #page2 #part1 img{
     width: 100%;
+    object-position: top;
     height: 110%;
     object-fit: cover;
 }
@@ -242,7 +250,6 @@ html,body{
     height: 85%;
     object-fit: cover;
     display: unset;
-
 }
 
 #page2 #part2 #content{
@@ -309,7 +316,6 @@ html,body{
     object-position: 0 45%;
 }
 
-
 #page4{
     height: 85%;
     padding: 3vw 5vw;
@@ -370,7 +376,6 @@ html,body{
 }
 
 .page5-ele #img:hover img{
-
     animation-name: img-hover;
     animation-duration: 2s;
     animation-fill-mode:forwards;
@@ -471,7 +476,6 @@ html,body{
     display: flex;
     gap: 2vw;
     margin-top: 2vh;
-
 }
 
 #page6 #right #img img{
@@ -639,5 +643,267 @@ html,body{
     }
     to{
         transform: translateX(calc(-100% - 20px));
+    }
+}
+
+
+/* Responsiveness */
+
+@media (max-width : 700px) {
+         
+    #nav{
+        margin-top: 2vw;
+        height: 10vh;
+    } 
+
+    #nav h1{
+        width: 50%;
+        font-size: 9vw;
+    }
+
+    #nav h3{
+        display: none;
+    }
+    
+    #nav h3:nth-last-child(1){
+        font-size: 9vw;
+        display: flex;
+    }
+
+    #content{
+        width: 100%;
+        height: 50%;
+        padding: 5vw;
+    }
+
+    #overlay{
+        height: 30%;
+    }
+
+    #scroll{
+        height: 20vh;
+        padding: .2vw .1vw;
+    }
+
+    .container img{
+        width: 17vh;
+        height: 17vh;
+        padding: 1vw;
+    }
+
+    #alphabets{
+        height: 10vh;
+        width: 100%;
+        justify-content: left;
+        overflow-x: auto;
+        padding: 0 5vw;
+    }
+
+    #alphabets::-webkit-scrollbar{
+        display: none;
+    }
+
+    .page{
+        height: 50%;
+    }
+
+    #page2 #part1{
+        width: 55%;
+    }
+
+    #page2 #part1 img{
+        height: 100%;
+    }
+
+    #page2 #part1 h1{
+        text-align: center;
+    }
+
+    #page2 #part2{
+        width: 37%;
+        height: 100%;
+    }
+
+    #page2 #part2 img{
+        height: 85%;
+    }
+
+    #page2 #part2 #content{
+        flex-direction: column;
+    }
+
+    #page2 #content h4{
+        width: 100%;
+        padding: 1vw;
+        font-size: 1.5vw;
+    }
+
+    #page2 #content p{
+       display: none;
+    }
+
+    #page3{
+        padding: 5vh 5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #page4{
+        height: 35%;
+        padding: 1vw 5vw;
+    }
+
+    #page5{
+        padding: 1vh 5vw;
+    }
+    
+    #page5 > h1{
+        font-size: 5vw;
+        padding: 2vh 2vw;;
+    }
+    
+    .page5-ele{
+        height: 10vh;
+    }
+    
+    .page5-ele #img{
+        width: 30%;
+    }
+
+    .page5-ele h3{
+        width: 10%;
+    }
+    
+    #page6{
+        display: flex;
+        height: 100%;
+        padding: 2vh 2vw;
+        flex-direction: column;
+    }
+    
+    #page6 #left{
+        width: 100%;
+        height: 100%;
+        background-position-y: 5%;
+    }
+    
+    #page6 #right{
+        margin-top: 2vh;
+        width: 100%;
+    }
+    
+    #page6 #right h1{
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    #page6 #right h3{
+        width: 100%;
+        font-weight: 500;
+        font-size: 3.5vw;
+        width: 80%;
+        margin: auto;
+        font-family: serif;
+    }
+    
+    #page6 #right h5{
+        padding: 2.4vw 0;
+        font-size: 1.8vw;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #page6 #right #img{
+        display: flex;
+        gap: 2vw;
+        padding: 0 3vw;
+        margin-top: 2vh;
+    }
+    
+    #page6 #right #img img{
+        height: 28vh;
+        width: 49%;
+    }
+    
+    #page8{
+        padding: 0 4vw;
+    }
+    #page8 #part1 , #page8 #part2{
+        height: 80%;
+    }
+    
+    #page8 #part2 #img{
+        width: 100%;
+        height: 52%;
+        background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6aUBboF8Mp8tGAdGSP0BjSlLBsbeJO5eAUBzOERWYZmI8nNQ1");
+        background-size: cover;
+    }
+    
+    #page8 #part2 #content{
+        flex-direction: column;
+        justify-content: left;
+    }
+    
+    #page8 #content h4{
+        width: 100%;
+        padding-bottom: 2vw;
+    }
+    
+    #page8 #content p{
+        width: 100%;
+        font-size: .27vw;
+        line-height: .25vw;
+    }
+    
+    #page9{
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8vh 5vw 20vh 5vw;
+    }
+    
+    #page9 > h1{
+        width: 15%;
+        height: fit-content;
+        font-size: 5vw;
+        margin-bottom: 2vh;
+    }
+    
+    #page9 #box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 2vh 0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #page9 #box h1{
+        padding-bottom: 2vh;
+        width: 80%;
+        margin: auto;
+        font-size: 3vw;
+        position: relative;
+    }
+    
+    #page9 #box h1::before{
+        content: 'B';
+        position: absolute;
+        padding: .5vh 1.3vw;
+        font-size: 3vw;
+        left: -7vw;
+        top: 0vh;
+    }
+    
+    #page9 #box img{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width : 500px) {
+     #overlay{
+        height: 40%;
     }
 }
