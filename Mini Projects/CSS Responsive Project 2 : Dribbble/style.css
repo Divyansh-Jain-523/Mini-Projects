@@ -16,6 +16,9 @@ body {
     background-color: rgb(247, 246, 243);
 }
 
+
+/* Nav */
+
 #nav {
     height: 5rem;
     width: calc(100% - 4rem);
@@ -81,8 +84,6 @@ body {
     border-radius: 10rem;
     background-color: #000;
 }
-
-
 
 
 
