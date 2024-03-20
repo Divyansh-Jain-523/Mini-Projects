@@ -1,6 +1,11 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
 }
 
 html,
@@ -13,7 +18,7 @@ body {
 #main {
     width: 100%;
     height: 100%;
-    background-color: rgb(247, 246, 243);
+    background-color: var(--background);
 }
 
 
@@ -21,7 +26,7 @@ body {
 
 #nav {
     height: 5rem;
-    width: calc(100% - 4rem);
+    width: calc(100%);
     display: flex;
     padding: 0 2rem;
     justify-content: space-between;
@@ -48,14 +53,25 @@ body {
     top: .1rem;
 }
 
+#center{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+#center img{
+    height: 50%;
+}
+
 #nav #right {
     justify-content: space-between;
     width: 30%;
 }
 
 #nav #right #search-box {
-    width: 50%;
-    background-color: #fff;
+    width: 60%;
+    background-color: var(--white);
     display: flex;
     border-radius: 10rem;
     padding: 0.75rem 1.25rem;
@@ -71,35 +87,196 @@ body {
     outline: none;
 }
 
-#nav #right a {
+#nav #right a{
     font-size: 0.75rem;
     font-weight: 550;
-    text-decoration: none;
-    color: #000;
 }
 
-#nav #right a:nth-last-child(1) {
-    color: white;
-    padding: 0.75rem 1.25rem;
+#nav #right a:nth-child(1) {
+    color: var(--black);
+}
+
+#nav #right a:nth-last-child(1){
+    color: var(--white)
+}
+
+/* Section 1 */
+
+#section-1{
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+#section-1 *{
+    max-width: 55%;
+}
+
+#section-1 a:nth-child(1){
+    padding: 0.5rem 1rem;
+    background-color: var(--gray);
+    color: #fff;
+    font-size: 1rem;
     border-radius: 10rem;
-    background-color: #000;
+}
+
+#section-1 h1{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 550;
+    line-height: 3.8rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#section-1 h4{
+    color: var(--gray);
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+#cards{
+    height: calc(50% - 5rem);
+    padding: 1.5rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    background-color: cyan;
+}
+
+#cards::-webkit-scrollbar{
+    display: none;
+}
+
+.card{
+    height: 100%;
+    width: 17%;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation-name: cards;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.card:nth-child(3n - 2){
+    background-color: red;
+}
+
+.card:nth-child(3n - 1){
+    background-color: blue;
+}
+
+.card:nth-child(3n){
+    background-color: green;
+}
+#info h4{
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+#info #skills{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#info #skills *{
+    border: 1px solid var(--gray);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.5rem;
+    border-radius: 2rem;
+}
+
+/* Main Section */
+
+#main-section{
+    padding: 4rem;
+}
+
+#main-section h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 2rem;
+    text-align: center;
+}
+
+#designs .box{
+    width: 350px;
+    height: 300px;
+}
+
+#designs .box img{
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box #base-line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box #base-line h4{
+    width: 60%;
+}
+
+.box #base-line h4 span{
+    background-color: rgb(198,198,198);
+    margin-left: 0.75rem;
+    padding: 0 0.1rem;
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+    color: #fff;
+    font-family:'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+.box #base-line h4 span:hover{
+    background-color: var(--black);
+}
+
+.box #base-line span{
+    font-size: 0.75rem;
+    line-height: 0.1rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 16;
+  color: rgb(142, 142, 151);
+  padding-right: 2px;
+}
+
+#heart:hover{
+    color: rgb(224, 81, 206);
 }
 
 
 
 
 
-
-
-
-
-
-
-
+@keyframes cards {
+    from{
+        transform: translateX (0);
+    }
+    to{
+        transform: translateX(calc(-100% - 2rem));
+    }
+}
 
 :root {
-    --pirmary: #000;
-    --secondory: rgb(71, 70, 86);
+    --black: rgb(5,4,18);
+    --white: #fff;
+    --gray: rgb(71, 70, 86);
+    --background: rgb(247, 246, 243); 
 }
 
 .center-main {
@@ -110,4 +287,15 @@ body {
 .center-cross {
     display: flex;
     align-items: center;
+}
+
+.btn-black{
+    color: var(--white);
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    background-color: var(--black);
+}
+
+.btn-black:hover{
+    background-color: var(--gray);
 }
