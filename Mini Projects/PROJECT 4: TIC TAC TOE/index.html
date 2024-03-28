@@ -32,18 +32,17 @@
         h1 {
             color: #fff;
             text-align: center;
-            font-size: min(12vw, 12vh);
+            font-size: min(15vw, 15vh);
             padding: min(2vw, 2vh);
         }
 
-        #game-box {
+        .game-box {
+            display: grid;
             height: calc(100% - min(25vw, 25vh));
             width: calc(100% - min(25vw, 25vh));
-            display: grid;
             margin: auto;
             grid-template-columns: 1fr 1fr 1fr;
             gap: min(1vw, 1vh);
-
         }
 
         .elements {
@@ -53,13 +52,44 @@
             background-size: cover;
             padding: 5%;
         }
+
+        .mode-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: calc(100% - min(25vh, 25vw));
+        }
+
+        .mode-option button {
+            background-color: greenyellow;
+            width: min(25vw, 25vh);
+            justify-self: center;
+            border: none;
+            border-radius: min(15vw, 15vh);
+            padding: min(1vw, 1vh);
+            height: min(15vw, 15vh);
+            font-size: min(5vw, 5vh);
+        }
+
+        .mode-option button:active {
+            color: red;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div id="main-box">
         <h1>Tic Tac Toe</h1>
-        <div id="game-box">
+        <div class="mode-option">
+            <button id="vs-computer">vs Computer</button>
+            <button id="vs-player">vs Players</button>
+        </div>
+        <div class="game-box hidden">
             <div class="elements" id="box-0"></div>
             <div class="elements" id="box-1"></div>
             <div class="elements" id="box-2"></div>
@@ -70,6 +100,7 @@
             <div class="elements" id="box-7"></div>
             <div class="elements" id="box-8"></div>
         </div>
+
     </div>
 
 
@@ -89,31 +120,6 @@
             'box-7': null,
             'box-8': null,
         }
-        const elements = document.querySelectorAll('.elements');
-        let count = 0;
-
-
-        const restartGame = function () {
-            count = 0;
-            for (let ele in box) box[ele] = null;
-            for (let element of elements)
-                element.style.backgroundImage = 'none';
-        }
-
-        for (let element of elements)
-            element.addEventListener('click', function (e) {
-                const boxNum = e.srcElement.id;
-                if (box[boxNum] == null) {
-                    // document.querySelector('#'+boxNum).style.backgroundSize = 'cover';
-                    document.querySelector('#' + boxNum).style.backgroundImage = count % 2 == 0 ? `url(${oSign})` : `url(${xSign})`;
-                    box[boxNum] = count % 2 == 0 ? 0 : 1;
-                    if (checkWin()) {
-                        confirm(`Player ${count % 2 == 0 ? 1 : 2} Wins the Game 🎉\nYour Game is been restarted!`);
-                        restartGame();
-                    }
-                    count++;
-                }
-            });
 
         const winningPatterns = [
             [0, 1, 2],
@@ -126,14 +132,83 @@
             [2, 4, 6],
         ];
 
+        const elements = document.querySelectorAll('.elements');
+        for (let element of elements)
+            element.addEventListener('click', func);
+
+        let count = 0;
+
         const checkWin = function () {
             if (count >= 4)
                 for (let [a, b, c] of winningPatterns) {
                     if (box['box-' + a] === box['box-' + b] && box['box-' + c] === box['box-' + b] && box['box-' + a] !== null) return true;
                 }
+            if (count === 9) {
+                confirm(`Game is Draw!\nYour Game is been restarted!`);
+                restartGame();
+            }
             return false;
-
         };
+
+        const restartGame = function () {
+            count = 0;
+            for (let ele in box) box[ele] = null;
+            for (let element of elements)
+                element.style.backgroundImage = 'none';
+        }
+
+        let com = false;
+        function func(e) {
+            let boxNum;
+            if (com && count % 2 == 1) { boxNum = 'box-' + random(); }
+            else { boxNum = e.srcElement.id; }
+
+            if (box[boxNum] == null) {
+                console.log(boxNum);
+                document.querySelector('#' + boxNum).style.backgroundImage = count % 2 == 0 ? `url(${oSign})` : `url(${xSign})`;
+                box[boxNum] = count % 2 == 0 ? 0 : 1;
+                count++;
+                if (checkWin()) {
+                    confirm(`Player ${count % 2 == 0 ? 2 : 1} Wins the Game 🎉\nYour Game is been restarted!`);
+                    restartGame();
+                }
+            }
+            if (com && count % 2 == 1) {
+                setTimeout(func,1000);
+            }
+        }
+        // const mode = prompt('');
+        // const setMode = document.querySelector("#game-box").classList;
+        // if (mode === '2p') {
+        //     setMode.remove('hidden');
+        // }
+        // setMode.add('game-box');
+
+        function random() {
+            let random = Math.trunc(Math.random() * 9);
+            while (box[random] != null) {
+                random = Math.trunc(Math.random() * 9);
+            }
+            return random;
+        }
+
+        document.querySelector('#vs-player').addEventListener('click', player);
+        document.querySelector('#vs-computer').addEventListener('click', computer);
+
+        function gameOn() {
+            document.querySelector('.game-box').classList.remove('hidden');
+            document.querySelector('.mode-option').classList.add('hidden');
+        }
+
+        function player() {
+            gameOn();
+        }
+
+        function computer() {
+            com = true;
+            gameOn();
+        }
+
     </script>
 </body>
 
