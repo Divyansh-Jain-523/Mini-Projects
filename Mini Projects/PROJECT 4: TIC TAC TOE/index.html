@@ -164,25 +164,18 @@
             else { boxNum = e.srcElement.id; }
 
             if (box[boxNum] == null) {
-                console.log(boxNum);
                 document.querySelector('#' + boxNum).style.backgroundImage = count % 2 == 0 ? `url(${oSign})` : `url(${xSign})`;
                 box[boxNum] = count % 2 == 0 ? 0 : 1;
                 count++;
                 if (checkWin()) {
-                    confirm(`Player ${count % 2 == 0 ? 2 : 1} Wins the Game 🎉\nYour Game is been restarted!`);
+                    confirm(`${count % 2 == 0 ? com ? 'Computer' : 'Second Player' : 'First Player'} Wins the Game 🎉\nYour Game is been restarted!`);
                     restartGame();
                 }
             }
             if (com && count % 2 == 1) {
-                setTimeout(func,1000);
+                setTimeout(func, 500);
             }
         }
-        // const mode = prompt('');
-        // const setMode = document.querySelector("#game-box").classList;
-        // if (mode === '2p') {
-        //     setMode.remove('hidden');
-        // }
-        // setMode.add('game-box');
 
         function random() {
             let random = Math.trunc(Math.random() * 9);
