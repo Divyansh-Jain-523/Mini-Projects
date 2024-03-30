@@ -13,6 +13,7 @@
     padding: 0 ;
     box-sizing: border-box;
     font-family: 'Gilroy';
+    font-size: 24px;
 }
 
 html,body{
@@ -28,7 +29,7 @@ html,body{
 }
 
 #nav{
-    margin-top: 2vw;
+    margin-top: 1.2rem;
     display: flex;
     justify-content: space-between ;
     align-items: center;
@@ -44,7 +45,7 @@ html,body{
     justify-content: center;
     align-items: center;
     font-family: Monument-Ultrabold;
-    font-size: 2.25vw;
+    font-size: 1.5rem;
     font-weight: bolder;
     letter-spacing: -3px;
 }
@@ -56,7 +57,7 @@ html,body{
     justify-content: center;
     align-items: center;
     border-right: 2px solid black;
-    font-size: 1.4vw;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -75,7 +76,7 @@ html,body{
 #content{
     width: 100%;
     height: 80%;
-    padding: 5vw;
+    padding: 3.2rem;
 }
 
 #center{
@@ -94,7 +95,7 @@ html,body{
     height: 52%;
     width: 100%;
     position: absolute; 
-    padding: 3vw;
+    padding: 2rem;
     bottom: 0;
 }
 
@@ -105,12 +106,12 @@ html,body{
 }
 
 #over1{
-    margin-bottom: 2vw;
+    margin-bottom: 1.3rem;
 }
  
 #over1 h1{
     font-family: Monument-Ultrabold;
-    font-size: 3.6vw; 
+    font-size: 2.5rem; 
 }
 
 #over1 h2{
@@ -118,7 +119,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0vw 3vw;
+    padding: 0vw 2rem;
     border-radius: 50%;
     border: 2px solid #fff;
 }
@@ -129,12 +130,12 @@ html,body{
 }
 
 #over2{
-    font-size: 1.3vw;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
 #over2 img{
-    height: 3vw;
+    height: 2rem;
 }
 
 #scroll{
@@ -235,7 +236,7 @@ html,body{
 
 #page2 #part1 h1{
     font-family: Monument-Ultrabold;
-    font-size: 3vw;
+    font-size: 2rem;
     text-transform: uppercase;
     padding: 1vw 0;
 }
@@ -272,7 +273,7 @@ html,body{
     font-family: Arial, Helvetica, sans-serif;
     height: fit-content;
     font-weight: 500;
-    font-size: 1.13vw;
+    font-size: 1.12rem;
     line-height: 1.2vw;
 }
 
@@ -297,7 +298,7 @@ html,body{
 }
 
 #page3 #left h4{
-    padding: 0 3vw;
+    padding: 0 2rem;
     font-size: 1.6vw;
     font-weight: 500;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -318,7 +319,7 @@ html,body{
 
 #page4{
     height: 85%;
-    padding: 3vw 5vw;
+    padding: 2rem 5vw;
 }
 
 #page4 img{
@@ -334,7 +335,7 @@ html,body{
 
 #page5 > h1{
     font-family: Monument-Ultrabold;
-    font-size: 3vw;
+    font-size: 2rem;
     text-align: center;
     padding: 2vh 2vw 10vh 2vw;;
 }
@@ -355,16 +356,16 @@ html,body{
 
 .page5-ele h5{
     text-transform: uppercase;
-    font-size: 1.3vw;
+    font-size: 1.2rem;
     width: 5vw;
     margin-top: 1vh;
-    margin-left: 3vw;
+    margin-left: 2rem;
     font-weight: 500;
 }
 
 .page5-ele #img{
     width: 40%;
-    padding: 0 3vw;
+    padding: 0 2rem;
 }
 
 .page5-ele #img img{
@@ -385,7 +386,7 @@ html,body{
     width: 45%;
     font-weight: 400;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 3vw;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -394,14 +395,14 @@ html,body{
 
 .page5-ele > h1::after{
     text-transform: uppercase;
-    font-size: 1.3vw;
+    font-size: 1.2rem;
     font-weight: 400;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .page5-ele h3{
     width: 20%;
-    font-size: 3vw;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -453,7 +454,7 @@ html,body{
 
 #page6 #right h1{
     font-family: Monument-Ultrabold;
-    font-size: 3.3vw;
+    font-size: 3.2rem;
 }
 
 #page6 #right h3{
@@ -467,7 +468,7 @@ html,body{
 #page6 #right h5{
     padding: 2.4vw 0;
     font-weight: 500;
-    font-size: 1.3vw;
+    font-size: 1.2rem;
     width: 95%;
     font-family: serif;
 }
@@ -545,7 +546,7 @@ html,body{
     font-family: Arial, Helvetica, sans-serif;
     height: fit-content;
     font-weight: 500;
-    font-size: 1.13vw;
+    font-size: 1.12rem;
     line-height: 1.2vw;
 }
 
@@ -560,7 +561,7 @@ html,body{
 
 #marquee h1{
     display: inline-block;
-    font-size: 3vw;
+    font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     width: fit-content;
@@ -816,7 +817,7 @@ html,body{
     #page6 #right #img{
         display: flex;
         gap: 2vw;
-        padding: 0 3vw;
+        padding: 0 2rem;
         margin-top: 2vh;
     }
     
@@ -883,15 +884,15 @@ html,body{
         padding-bottom: 2vh;
         width: 80%;
         margin: auto;
-        font-size: 3vw;
+        font-size: 2rem;
         position: relative;
     }
     
     #page9 #box h1::before{
         content: 'B';
         position: absolute;
-        padding: .5vh 1.3vw;
-        font-size: 3vw;
+        padding: .5vh 1.2rem;
+        font-size: 2rem;
         left: -7vw;
         top: 0vh;
     }

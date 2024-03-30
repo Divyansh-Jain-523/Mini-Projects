@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(242, 242, 242);
+}
+
+#navbar {
+  display: flex;
+  height: 12.5%;
+  margin: 0 1.25%;
+  padding: 0 1.25%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#login-text {
+  font-weight: 500;
+  font-size: min(2.1vh, 2.1vw);
+  color: rgb(52, 52, 52);
+}
+
+#logo {
+  width: min(6vw, 6vh);
+  height: min(6vw, 6vh);
+}
+
+#login {
+  display: flex;
+  gap: min(1vh, 1vw);
+}
+
+#login input[type="text"] {
+  background-color: #fff;
+  border: none;
+  text-align: center;
+  border-radius: 5rem;
+  padding: min(2vh, 2vw);
+  height: min(3vh, 3vw);
+  font-size: min(2vw, 2vh);
+  width: min(12.5vh, 12.5vw);
+}
+
+#login-btn {
+  background: transparent;
+  border: none;
+  font-size: min(2vw, 2vh);
+}
+
+#main-box {
+  width: 66%;
+  margin: auto;
+  margin-top: 1%;
+  height: 70%;
+  justify-content: space-between;
+}
+
+#top {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+}
+
+#balText {
+  font-size: min(2.2vh, 2.2vw);
+  color: rgb(52, 52, 52);
+  line-height: normal;
+  font-weight: 500;
+  line-height: min(2vh, 2vw);
+}
+
+label[for="bal-text"] {
+  font-size: min(1.4vh, 1.4vw);
+  color: gray;
+  font-weight: 500;
+}
+
+#bal-info {
+  font-size: min(5vh, 5vw);
+  color: rgb(52, 52, 52);
+  letter-spacing: min(0.5vh, 0.5vw);
+  font-weight: 400;
+}
+
+#main {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-between;
+}
+
+#main-left {
+  width: 54%;
+  height: 100%;
+  border-radius: min(4vh, 4vw);
+  background: #fff;
+  overflow-y: auto;
+}
+
+#main-right {
+  width: 44%;
+  height: 100%;
+  border-radius: min(4vh, 4vw);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: min(2vw, 2vh);
+}
+
+#main-right > * {
+  border-radius: min(1vw, 1vh);
+  padding: min(3vh, 3vw) min(5vh, 5vw);
+}
+
+#transfer {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 195, 1),
+    rgb(255, 168, 1)
+  );
+}
+
+#loan {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(141, 220, 80),
+    rgb(46, 172, 119)
+  );
+}
+
+#close {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 72, 80),
+    rgb(227, 28, 75)
+  );
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  text-align: center;
+  padding: 0 min(1.5vh, 1.5vw);
+  border-radius: min(1vh, 1vh);
+  font-size: min(2vw, 2vh);
+  height: min(3vh, 3vw);
+}
+
+.inp-box {
+  height: min(3vh, 3vw);
+  width: min(12.5vw, 12.5vh);
+  opacity: 0.3;
+  text-align: center;
+  border: none;
+  border-radius: min(1vh, 1vw);
+  font-weight: 500;
+}
+
+.inp-box:focus {
+  opacity: 0.5;
+}
+
+#transfer-box,
+#loan-box,
+#close-box {
+  display: flex;
+  flex-direction: row;
+  gap: min(1vw, 1vh);
+  text-align: center;
+  margin-top: min(1vh, 1vw);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden{
+  display: none;
+}
