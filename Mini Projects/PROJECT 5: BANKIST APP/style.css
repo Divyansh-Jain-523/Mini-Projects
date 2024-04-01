@@ -56,11 +56,11 @@ body {
 }
 
 #main-box {
-  width: 66%;
+  width: 100%;
+  padding: 0 min(17vw,17vh);
   margin: auto;
-  margin-top: 1%;
-  height: 70%;
-  justify-content: space-between;
+  height: min(70vh,70vw);
+  justify-content: center;
 }
 
 #top {
@@ -91,10 +91,10 @@ label[for="bal-text"] {
 }
 
 #main {
-  height: 75%;
+  height: 100%;
   width: 100%;
   display: flex;
-  margin-top: 5%;
+  margin-top: min(2vw,2vh);
   justify-content: space-between;
 }
 
@@ -106,6 +106,32 @@ label[for="bal-text"] {
   overflow-y: auto;
 }
 
+#main-left {
+  padding: min(2vh, 2vw);
+  overflow-y: auto;
+  row-gap: min(1vh, 1vw);
+}
+
+.entry {
+  display: flex;
+  padding: min(1vh, 1vw) min(5vh, 5vw);
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.deposit , .withdrawal {
+  padding: min(0.5vh, 0.5vw) min(1vw, 1vh);
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.amount {
+  font-size: min(3vw, 3vh);
+  font-weight: 500;
+}
+
 #main-right {
   width: 44%;
   height: 100%;
@@ -115,9 +141,9 @@ label[for="bal-text"] {
   row-gap: min(2vw, 2vh);
 }
 
-#main-right > * {
-  border-radius: min(1vw, 1vh);
-  padding: min(3vh, 3vw) min(5vh, 5vw);
+.box{
+  border-radius: max(2vw, 2vh);
+  padding: min(3vh, 3vw) min(5vw,5vh);
 }
 
 #transfer {
@@ -128,7 +154,8 @@ label[for="bal-text"] {
   );
 }
 
-#loan {
+#loan,
+.deposit {
   background-image: linear-gradient(
     to bottom right,
     rgb(141, 220, 80),
@@ -136,7 +163,8 @@ label[for="bal-text"] {
   );
 }
 
-#close {
+#close,
+.withdrawal {
   background-image: linear-gradient(
     to bottom right,
     rgb(255, 72, 80),
@@ -151,6 +179,7 @@ label[for="bal-text"] {
   padding: 0 min(1.5vh, 1.5vw);
   border-radius: min(1vh, 1vh);
   font-size: min(2vw, 2vh);
+  margin-top: min(2vh,2vw);
   height: min(3vh, 3vw);
 }
 
@@ -172,17 +201,34 @@ label[for="bal-text"] {
 #loan-box,
 #close-box {
   display: flex;
-  flex-direction: row;
   gap: min(1vw, 1vh);
   text-align: center;
   margin-top: min(1vh, 1vw);
 }
 
+.deposit,
+.withdrawal {
+  border-radius: min(1vw, 1vh);
+  padding: min(0.5vh, 0.5vw) min(1vh, 1vw);
+  height: 10%;
+  font-size: min(2vw,2vh);
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
+  margin-top: min(2vh,2vw);
 }
 
-.hidden{
+.hidden {
   display: none;
+}
+
+.form-label-head{
+  font-size: min(2.5vh,2.5vw);
+}
+
+.form-label-body{
+  font-size: min(2vw,2vh);
+  max-width: min(13vw, 13vh);
 }

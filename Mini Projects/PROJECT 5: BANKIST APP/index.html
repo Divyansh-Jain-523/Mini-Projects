@@ -19,7 +19,7 @@
         </div>
     </nav>
 
-    <main id="main-box" class="hidden">
+    <div id="main-box" class="hidden">
         <div id="top">
             <div id="bal">
                 <h3 id="bal-text">Current Balance</h3>
@@ -28,51 +28,49 @@
             <h1 id="bal-info">Balance</h1>
         </div>
         <div id="main">
-            <div id="main-left">
-
-            </div>
+            <div id="main-left"></div>
             <div id="main-right">
-                <div id="transfer">
-                    <label for="transfer-box">Transfer Money</label>
+                <div id="transfer" class="box">
+                    <label for="transfer-box" class="form-label-head">Transfer Money</label>
                     <div id="transfer-box">
                         <div class="flex-column">
                             <input type="text" class="inp-box" id="reciever">
-                            <label for="reciever" class="form-label">Transfer to</label>
+                            <label for="reciever" class="form-label-body">Transfer to</label>
                         </div>
                         <div class="flex-column">
                             <input type="number" class="inp-box" id="transfer-amount">
-                            <label for="transfer-amount" class="form-label">Amount</label>
+                            <label for="transfer-amount" class="form-label-body">Amount</label>
                         </div>
                         <button id="transfer-btn" class="btn">→</button>
                     </div>
                 </div>
-                <div id="loan">
-                    <label for="loan-box">Request Loan</label>
+                <div id="loan" class="box">
+                    <label for="loan-box" class="form-label-head">Request Loan</label>
                     <div id="loan-box">
                         <div class="flex-column">
                             <input type="number" class="inp-box" id="transfer-amount">
-                            <label for="transfer-amount" class="form-label">Amount</label>
+                            <label for="transfer-amount" class="form-label-body">Amount</label>
                         </div>
                         <button id="loan-btn" class="btn">→</button>
                     </div>
                 </div>
-                <div id="close">
-                    <label for="close-box">Close Account</label>
+                <div id="close" class="box">
+                    <label for="close-box" class="form-label-head">Close Account</label>
                     <div id="close-box">
                         <div class="flex-column">
                             <input type="text" class="inp-box" id="user">
-                            <label for="reciever" class="form-label">Confirm User</label>
+                            <label for="reciever" class="form-label-body">Confirm User</label>
                         </div>
                         <div class="flex-column">
                             <input type="password" class="inp-box" id="pin">
-                            <label for="pin" class="form-label">Confirm PIN</label>
+                            <label for="pin" class="form-label-body">Confirm PIN</label>
                         </div>
                         <button id="close-btn" class="btn">→</button>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
     <script src="./script.js"></script>
 </body>
 
