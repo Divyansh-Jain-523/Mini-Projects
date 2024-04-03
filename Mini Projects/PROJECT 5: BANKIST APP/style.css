@@ -104,12 +104,13 @@ label[for="bal-text"] {
   border-radius: min(4vh, 4vw);
   background: #fff;
   overflow-y: auto;
-}
-
-#main-left {
   padding: min(2vh, 2vw);
   overflow-y: auto;
   row-gap: min(1vh, 1vw);
+}
+
+#main-left::-webkit-scrollbar{
+  display: none;
 }
 
 .entry {
@@ -231,4 +232,20 @@ label[for="bal-text"] {
 .form-label-body{
   font-size: min(2vw,2vh);
   max-width: min(13vw, 13vh);
+}
+
+@media (max-width: 1200px) {
+  #main{
+    flex-direction: column;
+    row-gap: min(5vh,5vw);
+  }
+  #main-left {
+    height: 100%;
+    width: 100%;
+  }
+  #main-right{
+    height: 0;
+    width: 100%;
+    justify-content: center;
+  }
 }
